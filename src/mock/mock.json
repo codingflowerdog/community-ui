@@ -1,0 +1,26 @@
+{
+  "boards": {
+    "code":null,
+    "message":null,
+    "data":{
+      "total":2,
+      "offset":0,
+      "limit":10,
+      "results":[
+        {
+          "id":1,
+          "title":"게시판 제목 01",
+          "writer":"작성자01",
+          "createdAt":"2020-01-01 00:00:00",
+          "viewCount":1
+        },{
+          "id":2,
+          "title":"게시판 제목 02",
+          "writer":"작성자02",
+          "createdAt":"2020-01-01 00:00:00",
+          "viewCount":2
+        }
+      ]
+    }
+  }
+}
