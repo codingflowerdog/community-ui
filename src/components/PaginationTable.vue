@@ -4,8 +4,8 @@
     <v-data-table
         :headers="this.header"
         :items="this.data"
-        :page.sync="this.page"
-        :items-per-page="this.itemsPerPage"
+        :page.sync="this.pagination.offset"
+        :items-per-page="this.pagination.limit"
         hide-default-footer
         class="elevation-1"
     ></v-data-table>
@@ -31,15 +31,17 @@ import {IPagination} from "@/type/IPagination";
 })
 export default class PaginationTable extends Vue {
   // 초기 페이지 번호
-  // @Prop({type: Number, required: true}) page = 1;
-  // // 총 페이지 수
-  // @Prop({type: Number, required: true})  pageCount =  0;
-  // // 페이지당 표시 목록 수
-  // @Prop({type: Number, required: true})  itemsPerPage = 10;
-  // // 테이블 헤더
-  // @Prop({type: Array, required: true})  header:Array<any> = [];
-  // // 테이블 데이터 목록
-  // @Prop({type: Array, required: true})  data:Array<any> = [];
+
+  @Prop() pagination!: IPagination;
+  @Prop() offset!: number;
+  // 총 페이지 수
+  @Prop()  pageCount!: number;
+  // 페이지당 표시 목록 수
+  @Prop()  limit!: number;
+  // 테이블 헤더
+  @Prop()  header!: Array<ITableHeader>;
+  // 테이블 데이터 목록
+  @Prop()  data!: Array<any>;
 
   // // 초기 페이지 번호
   // page = 1;

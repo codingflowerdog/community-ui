@@ -94,7 +94,7 @@ export default class App extends Vue {
     'Dashboard',
     'Messages',
     'Profile',
-    'Updates',
+    'Update',
   ];
 }
 
